@@ -1,14 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A time capsule of family photos</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <h1> En Los Tiempos Viejos</h1>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+
+    #draggableElement {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-color: #3498db;
+      color: #fff;
+      text-align: center;
+      line-height: 100px;
+      cursor: move;
+    }
+
+    #container {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+    }
+  </style>
 </head>
 <body>
-    
+
+<div id="container">
+  <div id="draggableElement">Drag me!</div>
+</div>
+
+<script>
+  // Get the draggable element
+  var draggableElement = document.getElementById('draggableElement');
+
+  // Initialize variables for drag and scroll
+  var offsetX, offsetY, scrollX, scrollY;
+
+  // Set the draggable element to be draggable
+  draggableElement.draggable = true;
+
+  // Handle drag start
+  draggableElement.addEventListener('dragstart', function (e) {
+    offsetX = e.clientX - draggableElement.getBoundingClientRect().left;
+    offsetY = e.clientY - draggableElement.getBoundingClientRect().top;
+  });
+
+  // Handle drag over container
+  document.getElementById('container').addEventListener('dragover', function (e) {
+    e.preventDefault();
+    scrollX = this.scrollLeft;
+    scrollY = this.scrollTop;
+  });
+
+  // Handle drag
+  document.getElementById('container').addEventListener('drag', function (e) {
+    e.preventDefault();
+    draggableElement.style.left = e.clientX - offsetX + scrollX + 'px';
+    draggableElement.style.top = e.clientY - offsetY + scrollY + 'px';
+  });
+
+  // Handle scroll
+  document.getElementById('container').addEventListener('scroll', function () {
+    scrollX = this.scrollLeft;
+    scrollY = this.scrollTop;
+  });
+</script>
+
 </body>
-<h1>En Los Tiempos Viejos</h1>
-<img src="images/abuela.jpg"
 </html>
+
+
 
