@@ -46,6 +46,42 @@
                 <i class="fa-solid fa-bars"></i>
                </div>
             </div> 
+
+            <div class="dropdown_menu ">
+                <li><a href="hero">Home</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="services">Services</a></li>
+                <li><a href="contct">Contact</a></li>
+                <li><a href="#" class="action_btn">Get Started</a></li>  
+            </div>
         </header>
+
+        <main>
+            <section id="hero">
+                <h1>Welcome</h1>
+                <p> Join us on this nostalgic journey, as we empower individuals to honor the past
+                    celebrate the present, and create a lasting legacy for future generations. 
+                    'En los Viejos Tiempos'- where memories endure, and stories unfold through
+                    the art of shared heritage.
+                </p>
+            </section>
+        </main>
+
+        <script>
+            const toggleBtn = document.querySelector('.toggle_btn')
+            const toggleBtnIcon = document.querySelector('.toggle_btn i')
+            const dropdown_menu = document.querySelector('.dropdown_menu')
+
+            toggleBtn.onclick = function (){
+                dropdown_menu.classList.toggle('open')
+                const isOpen =dropdown_menu.classList.contains('open')
+
+
+                toggleBtnIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+
+            }
+        </script>
     </body>
 </html>
