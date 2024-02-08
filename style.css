@@ -1,9 +1,13 @@
+@font-face {
+    font-family:"CameraObscuraDEMO.otf" ;
+    src: url(Fonts/CameraObscuraDEMO.otf);
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "CameraObscuraDEMO.otf";
-    src: local(CameraObscuraDEMO);
+   src: local(Fonts/CameraObscuraDEMO);
 }
 
 li{
@@ -22,13 +26,15 @@ a:hover{
 
 /* HEADER */
 header {
-    color: white;
+    color: red;
     padding: 20px;
   }
   
   .navbar{
+    background-color:black; 
+    padding: 40px; 
     width: 100%;
-    height: 60px;
+    height: 100%;
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
