@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    </head>
+<body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device=width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="style.css" />
+       
+    </head>
+    <body>
+        <header>
+            <div class="navbar">
+            <div class="logo"> <a href="#">En Los Viejos Tiempos</a>
+            <ul class="links">
+                <li><a href="hero">Welcome</a></li>
+                <li><a href="Mission Statement">Mission Statement</a></li>
+                <li><a href="Get Involved">Get Involved</a></li>
+                <li><a href="contct">Contact</a></li>
+               </ul>
+               <a href="#" class="action_btn">Gallery</a>
+               <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+               </div>
+            </div> 
+
+            <div class="dropdown_menu ">
+                <li><a href="hero">Home</a></li>
+                <li><a href="Mission Statement">Mission Statement</a></li>
+                <li><a href="Get Involved">Get Involved</a></li>
+                <li><a href="contct">Contact</a></li>
+                <li><a href="#" class="action_btn">Gallery</a></li>  
+            </div>
+
+            <div>
+                <section id="hero">
+                    <h1>Welcome</h1>
+                    <p> Join us on this nostalgic journey, as we empower individuals to honor the past,
+                        celebrate the present, and create a lasting legacy for future generations. 
+                        'En los Viejos Tiempos'- where memories endure, and stories unfold through
+                        the art of shared heritage.
+                    </p>
+                    <style type="text/css"></style>
+                    
+                </section>
+            </div>
+        </header>
+  
+  <footer>
+    <div class="container">
+      <div class="social">
+        <a href="https://www.instagram.com/enlosviejostiempos.official?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+          <img src="Images/Logo.jpg" alt="Logo">
+        </a>
+        <p>@enlosviejos.tiempos</p>
+      </div>
+    </div>
+  </footer>
+
+
+
+        <main></main>
+       
+
+        <script>
+            const toggleBtn = document.querySelector('.toggle_btn')
+            const toggleBtnIcon = document.querySelector('.toggle_btn i')
+            const dropdown_menu = document.querySelector('.dropdown_menu')
+
+            toggleBtn.onclick = function (){
+                dropdown_menu.classList.toggle('open')
+                const isOpen =dropdown_menu.classList.contains('open')
+
+
+                toggleBtnIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+
+            }
+        </script>
+
+    
+    </body>
+</html>
