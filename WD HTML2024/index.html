@@ -1,86 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
-    
-    </head>
-<body>
+<html>
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device=width, initial-scale=1.0"/>
-        <link rel="stylesheet" href="style.css" />
-       
-    </head>
-    <body>
-        <header>
-            <div class="navbar">
-            <div class="logo"> <a href="#">En Los Viejos Tiempos</a>
-            <ul class="links">
-                <li><a href="hero">Welcome</a></li>
-                <li><a href="Mission Statement">Mission Statement</a></li>
-                <li><a href="Get Involved">Get Involved</a></li>
-                <li><a href="contct">Contact</a></li>
-               </ul>
-               <a href="#" class="action_btn">Gallery</a>
-               <div class="toggle_btn">
-                <i class="fa-solid fa-bars"></i>
-               </div>
-            </div> 
-
-            <div class="dropdown_menu ">
-                <li><a href="hero">Home</a></li>
-                <li><a href="Mission Statement">Mission Statement</a></li>
-                <li><a href="Get Involved">Get Involved</a></li>
-                <li><a href="contct">Contact</a></li>
-                <li><a href="#" class="action_btn">Gallery</a></li>  
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="style 2.css">
+    </html>
+   <body>
+    <section id="banner">
+        <img src="Images/favicon.png" class="favicon">
+        <div class="banner-text">
+            <h1> En Los Viejos Tiempos</h1>
+            <p> A Virtual Portait Gallery Curated by Lisbeth Triana </p>
+            <div class="banner-btn">
+                <a href="index.html"><span></span>Home</a>
+                <a href="Mission.html"><span></span>Mission</a>
+                <a href="Gallery.html"><span></span>Gallery</a>
+                <a href="Join.html"><span></span>Join</a>
+               
+                
             </div>
+        </div>
+    </section>
 
-            <div>
-                <section id="hero">
-                    <h1>Welcome</h1>
-                    <p> Join us on this nostalgic journey, as we empower individuals to honor the past,
-                        celebrate the present, and create a lasting legacy for future generations. 
-                        'En los Viejos Tiempos'- where memories endure, and stories unfold through
-                        the art of shared heritage.
-                    </p>
-                    <style type="text/css"></style>
-                    
-                </section>
-            </div>
-        </header>
-  
-  <footer>
-    <div class="container">
-      <div class="social">
-        <a href="https://www.instagram.com/enlosviejostiempos.official?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
-          <img src="Images/Logo.jpg" alt="Logo">
-        </a>
-        <p>@enlosviejos.tiempos</p>
-      </div>
+    <div id="sidenav">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Mission.html">Mission</a></li>
+                <li><a href="Gallery.html">Gallery</a></li>
+                <li><a href="Join.html">Join</a></li>
+            </ul>
+        </nav>
     </div>
-  </footer>
+    <div id="menuBtn">
+        <img src="Images/menu.png" id="menu">
+    </div>
 
 
 
-        <main></main>
-       
 
-        <script>
-            const toggleBtn = document.querySelector('.toggle_btn')
-            const toggleBtnIcon = document.querySelector('.toggle_btn i')
-            const dropdown_menu = document.querySelector('.dropdown_menu')
+    <footer>
+        <p>&copy; 2024 EN LOS VIEJOS TIMEPOS ALL RIGHTS TO @PLAYBOY_CREATES</p>
+    </footer>
 
-            toggleBtn.onclick = function (){
-                dropdown_menu.classList.toggle('open')
-                const isOpen =dropdown_menu.classList.contains('open')
+<script>
+  var menuBtn = document.getElementById("menuBtn")
+var sidenav = document.getElementById("sidenav")
+var menu = document.getElementById("menu")
 
+sidenav.style.right = "-250px";
 
-                toggleBtnIcon.classList = isOpen
-                ? 'fa-solid fa-xmark'
-                : 'fa-solid fa-bars'
+menuBtn.onclick = function(){
+    if(sidenav.style.right === "-250px"){
+        sidenav.style.right = "0";
+        menu.src="Images/close.png";
+    } else {
+        sidenav.style.right = "-250px";
+        menu.src="Images/menu.png";
+    }
+}
 
-            }
-        </script>
-
-    
-    </body>
+</script>
+   </body>
 </html>
